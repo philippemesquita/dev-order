@@ -1,161 +1,100 @@
-# EXERCÍCIO DE PRÁTICA — FRONTEND
+# 🍔 Dev Order
 
-### 📌 Contexto
+Um pequeno sistema de **gerenciamento de pedidos** desenvolvido com
+**HTML, CSS e JavaScript**, consumindo uma **API fake com JSON Server**.
 
-Você foi contratado para desenvolver a interface de gerenciamento de pedidos de um restaurante.
+Este projeto foi criado como prática de **CRUD no front-end**, consumo
+de API com **fetch**, manipulação de **estado local** e **renderização
+dinâmica no DOM**.
 
-O backend já existe (json-server).
-Seu trabalho é consumir a API, gerenciar estado no frontend e renderizar corretamente a UI.
+---
 
-### 🔗 API (fake)
+## 🚀 Funcionalidades
 
-Base URL:
+- Criar novos pedidos
+- Listar pedidos cadastrados
+- Atualizar status do pedido
+- Excluir pedidos
+- Renderização dinâmica dos pedidos no DOM
+- Controle de estado no front-end
 
+---
+
+## 📦 Status dos pedidos
+
+Cada pedido possui um status:
+
+- **Pending (Pendente)** → pedido criado
+- **Preparing (Preparando)** → pedido em preparação
+- **Delivered (Entregue)** → pedido finalizado
+
+Fluxo do pedido:
+
+    pending → preparing → delivered
+
+Pedidos entregues não podem mais ser alterados ou removidos.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- Fetch API
+- JSON Server
+
+## ▶️ Como rodar o projeto
+
+### 1️⃣ Instalar o JSON Server
+
+```bash
+npm install -g json-server
 ```
-http://localhost:3000
-```
 
-End Point:
+### 2️⃣ Criar o arquivo `db.json`
 
-```
-/orders
-```
-
-Estrutura do pedido:
-
-```
+```json
 {
-  "id": "string",
-  "client": "string",
-  "product": "string",
-  "status": "pending" | "preparing" | "delivered"
+  "orders": []
 }
 ```
 
-### 🎯 Objetivo
+### 3️⃣ Iniciar a API fake
 
-Criar uma página web que permita:
-
-- Criar pedidos
-
-- Listar pedidos
-
-- Atualizar status
-
-- Remover pedidos
-
-- Manter UI sincronizada com estado local
-
-### 🧱 Requisitos obrigatórios
-
-1️⃣ HTML (estrutura)
-
-A página deve ter:
-
-#### Um formulário com:
-
-- Input para nome do cliente
-
-- Input para produto
-
-- Botão “Criar pedido”
-
-#### Uma lista de pedidos (ul ou div)
-
-#### Cada pedido deve exibir:
-
-- Cliente
-
-- Produto
-
-- Status
-
-- Botões de ação
-
-❗ Sem frameworks (React, Vue, etc).
-
-### 2️⃣ CSS (visual mínimo)
-
-Você deve:
-
-#### Diferenciar pedidos por status:
-
-- pending → amarelo
-
-- preparing → azul
-
-- delivered → verde
-
-#### Pedido delivered:
-
-- texto riscado
-
-- botões de status desativados
-
-#### Layout simples e organizado (flex ou grid)
-
-Não precisa ser bonito — precisa ser claro.
-
-### 3️⃣ JavaScript (lógica)
-
-Você deve implementar:
-
-#### Estado
-
-```
-let orders = [];
+```bash
+json-server --watch db.json
 ```
 
-#### Funções obrigatórias
+A API ficará disponível em:
 
-- fetchOrders()
+    http://localhost:3000/orders
 
-- createOrder(client, product)
+---
 
-- updateOrderStatus(id, newStatus)
+## 📚 O que foi praticado neste projeto
 
-- removeOrder(id)
+- CRUD com Fetch API
+- Manipulação de arrays (`map`, `filter`, `find`)
+- Controle de estado no front-end
+- Renderização dinâmica com JavaScript
+- Manipulação do DOM
+- Organização de lógica de aplicação
 
-- renderOrders()
+---
 
-### ⚙️ Regras de negócio
+## 🎯 Objetivo do projeto
 
-#### Não pode mudar status de pedido delivered
+Este projeto faz parte do meu processo de estudo para reforçar conceitos
+importantes de **JavaScript moderno**, especialmente:
 
-#### Não pode criar pedido sem cliente ou produto
+- Consumo de APIs
+- Manipulação de estado
+- Lógica de programação
+- Estruturação de aplicações front-end
 
-#### Ao atualizar/remover:
+---
 
-- atualizar backend
+## 👨‍💻 Autor
 
-- atualizar estado local (imutável)
-
-- re-renderizar a UI
-
-### 🔁 Fluxo esperado
-
-1. Página carrega
-
-2. fetchOrders() é executado
-
-3. renderOrders() mostra os pedidos
-
-#### 4. Usuário interage:
-
-- cria
-
-- atualiza status
-
-- remove
-
-5 . UI reflete sempre o estado atual
-
-### 🚫 O que NÃO pode
-
-- Mutar estado diretamente
-
-- Recarregar a página
-
-- Usar innerHTML +=
-
-- Usar bibliotecas externas
+Desenvolvido como projeto de estudo para evolução nas tecnologias **HTML - CSS - JAVASCRIPT**.
