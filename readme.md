@@ -1,6 +1,6 @@
 # EXERCÍCIO DE PRÁTICA — FRONTEND
 
-### 📌 Contexto (estilo empresa)
+### 📌 Contexto
 
 Você foi contratado para desenvolver a interface de gerenciamento de pedidos de um restaurante.
 
@@ -159,37 +159,3 @@ let orders = [];
 - Usar innerHTML +=
 
 - Usar bibliotecas externas
-
-### ⭐ Critérios de avaliação (empresa)
-
-#### Você será avaliado em:
-
-- Organização do código
-
-- Uso correto de map, filter, some
-
-- Imutabilidade
-
-- Clareza das regras
-
-- Sincronização backend ↔ frontend
-
-### 📦 Entregáveis
-
-- index.html
-
-- styles.css
-
-- script.js
-
-### 💡 Dicas (não obrigatórias)
-
-- Use data-id nos elementos
-
-- Centralize regras no JS
-
-- Prefira funções pequenas
-
-- Pense sempre:
-
-“Estado muda → renderiza de novo”
