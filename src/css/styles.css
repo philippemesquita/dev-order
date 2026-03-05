@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
+
+:root {
+  /* Base Colors */
+  --color-red: #dd3e33;
+  --color-red-hover: #b82a2a;
+  --color-yellow: #ffc72c;
+  --color-dark: #1c1c1c;
+  --color-white: #ffffff;
+
+  /* Card */
+  --card-bg: #fff8f0;
+  --card-border: #f1e2d0;
+  --card-color: #2e2e2e;
+
+  /* Pending */
+  --status-pending-bg: #fff1c1;
+  --status-pending-color: #8a6d1d;
+  --status-pending-border: #ffe08a;
+
+  /* Preparing */
+  --status-preparing-bg: #e6f0ff;
+  --status-preparing-color: #2c5aa0;
+  --status-preparing-border: #bfd8ff;
+
+  /* Delivered */
+  --status-delivered-bg: #e6f7ed;
+  --status-delivered-color: #2f7a4f;
+  --status-delivered-border: #bfe6d0;
+
+  /* Remove Button */
+  --btn-remove-bg: #ffe5e5;
+  --btn-remove-color: #a33a3a;
+  --btn-remove-border: #ffb3b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo span {
+  color: var(--color-red);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--card-color);
+  font-size: 1.5rem;
+}
+
+.order-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 32px;
+  margin: 30px 0;
+}
+
+.order-form input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.order-form input:focus {
+  border: 1px solid var(--color-yellow);
+}
+
+.order-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+  background-color: var(--color-red-hover);
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--card-color);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-info strong {
+  font-size: 16px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.pending {
+  background-color: var(--status-pending-bg);
+  border: 1px solid var(--status-pending-border);
+  color: var(--status-pending-color);
+}
+
+.preparing {
+  background-color: var(--status-preparing-bg);
+  border: 1px solid var(--status-preparing-border);
+  color: var(--status-preparing-color);
+}
+
+.delivered {
+  background-color: var(--status-delivered-bg);
+  border: 1px solid var(--status-delivered-border);
+  color: var(--status-delivered-color);
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.card-delivered {
+  background-color: var(--status-delivered-bg);
+  border: 1px solid var(--status-delivered-border);
+  opacity: 0.6;
+}
+
+.order-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.order-actions button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.order-actions button:hover {
+  background: #e6e6e6;
+}
+
+.order-actions .remove {
+  background-color: var(--btn-remove-bg);
+  border: 1px solid var(--btn-remove-border);
+  color: var(--btn-remove-color);
+  transition: background-color 0.3s;
+}
+
+.order-actions .remove:hover {
+  background-color: #ff5b5b;
+  color: var(--color-white);
+}
+
+.order-actions button:disabled {
+  cursor: not-allowed;
+}
+
+.msg {
+  text-align: center;
+  margin-top: 40px;
+}
